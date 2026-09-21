@@ -1,0 +1,3 @@
+The vault remembers its first instruction.
+
+Release phrase: The fondue has left the vault

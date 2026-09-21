@@ -8,6 +8,7 @@ Large language models can search the web, but they still struggle to answer ques
 
 - [Briefing deck](briefing-swiss-grounding-mcp.pdf): the slides from the virtual hacker Q&A on 16. September 2026, updated on 21. September 2026 with the answers below.
 - This README: the answers to the questions you asked in the Q&A, the topic areas we draw test questions from, sample questions, and what you deliver.
+- [Submission self-check pack](#submission-self-check-pack): practice cases and an evidence checklist for reviewing your submission against the published judging priorities.
 
 ## Your questions from the Q&A, answered
 
@@ -22,6 +23,9 @@ Large language models can search the web, but they still struggle to answer ques
 - Honesty outside your scope: a few questions will fall outside what you declared. The right behaviour is to say clearly that this is not covered, not to guess.
 
 **Asking back can be the right answer.** When the answer depends on information that is missing, such as the municipality, a precise request for exactly that information counts as correct. When the question can be answered as asked, asking back counts as wrong, and so does asking for context you do not need.
+
+Before your final demo, use the [submission self-check pack](#submission-self-check-pack)
+to check citation support, jurisdiction, missing context and honest failure handling.
 
 **What we tell you in advance, and what we keep.** This repository lists the topic areas we draw questions from and around five sample questions, including one where the correct response is to ask for the municipality. The full question set stays hidden, and we do not publish its size. Questions come in the four national languages: German, French, Italian and Romansh.
 
@@ -71,6 +75,32 @@ Choosing and reaching the right sources is part of the challenge. Swisscom does 
 3. Qual è il premio mensile più basso dell'assicurazione di base per un adulto di 30 anni domiciliato a Lugano con franchigia di 2500 franchi?
 4. Cura èn las vacanzas d'atun 2026 per la scola da Scuol?
 5. Wie hoch ist der Rundfunkbeitrag, den ich nach meinem Umzug nach Konstanz zahlen muss?
+
+### Submission self-check pack
+
+**Want a stronger submission? Check the cases that a polished demo can miss.**
+The companion pack turns the published judging priorities into practice cases:
+citations that actually support a claim, the right municipality and reference year,
+asking only for essential missing context, and honest responses when retrieval fails.
+It also includes an evidence checklist to use before your final demo.
+
+The runnable pack is preserved as a versioned snapshot in Git history so its examples
+and helper stay together. Recover the latest snapshot from the repository root:
+
+```sh
+material_commit=$(git log -1 --diff-filter=A --format=%H -- swiss-grounding-mcp/evaluation/sample-questions.b64)
+git restore --source="$material_commit" --worktree -- swiss-grounding-mcp/evaluation
+```
+
+Start with `swiss-grounding-mcp/evaluation/README.md`. The companion utility prints
+the practice cases, review checklist and a session-specific exercise:
+
+```sh
+python3 swiss-grounding-mcp/evaluation/sample_runner.py
+```
+
+A shallow clone needs the earlier history fetched first. These practice cases target
+the published criteria; they are not hidden evaluation questions or a scoring formula.
 
 ### 3. How must the solution run, and what support is available for embeddings and costs?
 
