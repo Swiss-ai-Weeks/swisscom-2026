@@ -1,3 +1,0 @@
-- Declare your MCP server's topic and geographic scope, keeping it manageable and verifiable against authoritative Swiss sources.
-- Support each factual claim with citations, confirming the responsible jurisdiction and relevant reference period before answering.
-- Report coverage gaps honestly, and request missing context only when it's necessary to answer correctly.

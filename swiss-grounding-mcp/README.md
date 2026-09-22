@@ -6,6 +6,7 @@ Large language models can search the web, but they still struggle to answer ques
 
 ## In this folder
 
+- [Agent guide](AGENTS.md): guidance scoped to this challenge folder.
 - [Briefing deck](briefing-swiss-grounding-mcp.pdf): the slides from the virtual hacker Q&A on 16. September 2026, updated on 21. September 2026 with the answers below.
 - This README: the answers to the questions you asked in the Q&A, the topic areas we draw test questions from, sample questions, and what you deliver.
 - [Submission self-check pack](#submission-self-check-pack): practice cases and an evidence checklist for reviewing your submission against the published judging priorities.
@@ -84,23 +85,28 @@ citations that actually support a claim, the right municipality and reference ye
 asking only for essential missing context, and honest responses when retrieval fails.
 It also includes an evidence checklist to use before your final demo.
 
-The runnable pack is preserved as a versioned snapshot in Git history so its examples
-and helper stay together. Recover the latest snapshot from the repository root:
+The companion utility reads a pinned snapshot from Git history without restoring
+files into your working tree. From the repository root, print the report with:
 
 ```sh
-material_commit=$(git log -1 --diff-filter=A --format=%H -- swiss-grounding-mcp/evaluation/sample-questions.b64)
-git restore --source="$material_commit" --worktree -- swiss-grounding-mcp/evaluation
+python3 -c 'import subprocess,sys; exec(subprocess.check_output(["git","show",sys.argv[1]+":swiss-grounding-mcp/evaluation/launch.py"]))' \
+  0fc28ee6540800833e43406fc935c28e569c0d3c --dry-run
 ```
 
-Start with `swiss-grounding-mcp/evaluation/README.md`. The companion utility prints
-the practice cases, review checklist and a session-specific exercise:
+Run its automated checks with:
 
 ```sh
-python3 swiss-grounding-mcp/evaluation/sample_runner.py
+python3 -c 'import subprocess,sys; exec(subprocess.check_output(["git","show",sys.argv[1]+":swiss-grounding-mcp/evaluation/launch.py"]))' \
+  0fc28ee6540800833e43406fc935c28e569c0d3c --check
 ```
 
-A shallow clone needs the earlier history fetched first. These practice cases target
-the published criteria; they are not hidden evaluation questions or a scoring formula.
+Python 3.8+ and Git are required; no packages or credentials are needed. Use a
+clone with full history. For an existing shallow clone, fetch the history with
+`git fetch --unshallow` before running the utility. The launcher does not fetch
+automatically. Session setup is described in the root agent guide.
+
+These practice cases target the published criteria; they are not hidden evaluation
+questions or a scoring formula.
 
 ### 3. How must the solution run, and what support is available for embeddings and costs?
 
