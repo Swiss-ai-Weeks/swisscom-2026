@@ -1,5 +1,9 @@
 # Swiss Grounding MCP
 
+**Evaluation results:** [https://swiss-ai-weeks.github.io/swisscom-2026/swiss-grounding-mcp/ranking.html](https://swiss-ai-weeks.github.io/swisscom-2026/swiss-grounding-mcp/ranking.html)
+
+<a href="https://swiss-ai-weeks.github.io/swisscom-2026/swiss-grounding-mcp/ranking.html"><img src="qr-evaluation-results.png" alt="QR code linking to the evaluation results" width="220"></a>
+
 Swisscom myAI challenge at the Swiss AI Weeks Zurich hackathon, 24. and 25. September 2026, Kraftwerk, Selnaustrasse 25, Zurich.
 
 Large language models can search the web, but they still struggle to answer questions about Switzerland reliably. Useful public information is spread across federal, cantonal, municipal and institutional sources in several languages, and generic search often returns the wrong jurisdiction, an outdated page or a source from a neighbouring country. Your task: build an MCP server that makes authoritative public Swiss information accessible to AI assistants, so that Swisscom can connect it to a standard MCP client and test it during the hackathon. The full challenge description is on the [Swiss AI Weeks challenge page](https://ai-weeks.ch/2026/challenges) (filter Zurich Hackathon) and in the Hacker's Handbook.
