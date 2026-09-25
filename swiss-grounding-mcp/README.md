@@ -8,7 +8,7 @@ Large language models can search the web, but they still struggle to answer ques
 
 - [Agent guide](AGENTS.md): guidance scoped to this challenge folder.
 - [Briefing deck](briefing-swiss-grounding-mcp.pdf): the slides from the virtual hacker Q&A on 16. September 2026, updated on 21. September 2026 with the answers below.
-- [Evaluation results](ranking.html): the official scores of all six teams, the quality ranking and what we measured for each team, as of 25. September 2026. GitHub shows this file as source code; download it and open it in a browser.
+- [Evaluation results](https://swiss-ai-weeks.github.io/swisscom-2026/swiss-grounding-mcp/ranking.html): the official scores of all six teams, the quality ranking and what we measured for each team, as of 25. September 2026. The source file is [ranking.html](ranking.html).
 - This README: the answers to the questions you asked in the Q&A, the topic areas we draw test questions from, sample questions, and what you deliver.
 - [Submission self-check pack](#submission-self-check-pack): practice cases and an evidence checklist for reviewing your submission against the published judging priorities.
 
